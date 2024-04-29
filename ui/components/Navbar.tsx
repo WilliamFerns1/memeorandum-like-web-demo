@@ -54,6 +54,7 @@ export default function WithSubnavigation() {
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
+            fontWeight="bold"
             color={useColorModeValue('gray.800', 'white')}>
             HappyPositiveNews
           </Text>

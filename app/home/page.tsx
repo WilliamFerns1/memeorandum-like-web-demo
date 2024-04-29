@@ -18,6 +18,7 @@ export default function Page() {
         direction="column"
         w={"full"}
         gap={"10px"}
+        h="100%"
       >
         <TopItems />
       </Flex>
