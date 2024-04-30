@@ -1,16 +1,8 @@
 "use server";
-import admin from "firebase-admin";
-
-const serviceAccount = require("@/serviceAccount.json");
-
-// if it is already initalized, do not initialize again
-if (!admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-  });
-}
+import { instantiateFirestore } from "../helpers";
 
 async function getArticles() {
+  const admin = await instantiateFirestore();
   const db = admin.firestore();
   const articlesRef = db.collection("articles");
 

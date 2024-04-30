@@ -5,12 +5,11 @@ import { TopItems, TrendingTopics, TopWriters } from "@/ui/home";
 export default function Page() {
   return (
     <Flex
-      align="center"
       justify="center"
-      gap={{base: "20px", md: "40px"}}
-      w={"100vw"}
-      h={"100vh"}
-      p={{base: "15px", md: "25px"}}
+      gap="20px"
+      w={"full"}
+      h="fit-content"
+      p={{base: "15px", md: "25px 35px", lg: "35px 45px"}}
     >
       <Flex
         align="center"
@@ -24,10 +23,10 @@ export default function Page() {
       </Flex>
       <Flex
         align="center"
-        justify="center"
         direction="column"
-        w={"full"}
+        w={{base: "100%", md: "50%"}}
         gap={"10px"}
+        h="100%" 
       >
         <TrendingTopics />
         <TopWriters />

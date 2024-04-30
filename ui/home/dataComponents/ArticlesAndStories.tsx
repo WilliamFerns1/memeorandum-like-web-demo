@@ -55,7 +55,7 @@ export default function ArticlesAndStories() {
               }
             </Flex>
           </Flex>
-          <Button colorScheme="blue" size="sm" margin="5px">Read More...</Button>
+          <Button colorScheme="blue" size="sm" margin="5px">Read More</Button>
           <Button colorScheme="gray" size="sm" margin="5px">{article.category}</Button>
         </Box>
       ))}
