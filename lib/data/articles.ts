@@ -3,9 +3,12 @@ import admin from "firebase-admin";
 
 const serviceAccount = require("@/serviceAccount.json");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+// if it is already initalized, do not initialize again
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+  });
+}
 
 async function getArticles() {
   const db = admin.firestore();

@@ -1,5 +1,7 @@
 'use client'
 
+import { Link } from "@chakra-ui/next-js";
+
 import {
   Box,
   Heading,
@@ -40,6 +42,7 @@ export default function Hero() {
             alignSelf={'center'}
             position={'relative'}>
             <Button
+              as={Link}
               colorScheme={'green'}
               bg={'green.400'}
               rounded={'full'}
@@ -47,8 +50,7 @@ export default function Hero() {
               _hover={{
                 bg: 'green.500',
               }}
-              // navigate to the home page 
-              onClick={() => window.location.href = '/home'}
+              href="/home"
             >
               Get Started
             </Button>
